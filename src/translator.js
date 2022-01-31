@@ -1,5 +1,7 @@
-const getAllTextNodes = () => {
-	var n, a = [], walk = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT, null, false);
+let cachedTranslations = {}
+
+const getAllTextNodes = (root = document.body) => {
+	var n, a = [], walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
 	while (n = walk.nextNode()) a.push(n);
 	return a;
 }
@@ -32,26 +34,44 @@ const translateText = async map => {
 	const translationString = await translate(jsonMap);
 
 	const translations = JSON.parse(translationString);
-
-	nodes.forEach((node, i) => {
-		node.textContent = translations[node.textContent]
-	});
+	cachedTranslations = { ...cachedTranslations, ...translations };
+	return cachedTranslations;
 }
 
 const filterNodes = nodes => {
 	const alphaRegex = new RegExp(/[a-zA-Z]+/);
-	return nodes.filter(({ data, parentNode }) =>
+	return [...nodes].filter(({ data, parentNode }) =>
 		data &&
 		parentNode.nodeName !== 'SCRIPT' &&
 		data.match(alphaRegex)
 	).sort((a, b) => b.length - a.length)
 }
 
-const createTranslationMapFromNodes = nodes => nodes.reduce((result, node) => ({ ...result, [node.textContent]: '' }), {})
+const createTranslationMapFromNodes = nodes => nodes.reduce((result, node) => {
+	if (cachedTranslations[node.textContent]) {
+		return result;
+	}
 
-const nodes = getAllTextNodes();
-const filteredNodes = filterNodes(nodes);
-const translationMap = createTranslationMapFromNodes(filteredNodes);
+	return {
+		...result,
+		[node.textContent]: ''
+	};
+}, {})
 
-console.log('Executed!')
-translateText(translationMap);
+const translateNodes = async nodes => {
+	const filteredNodes = filterNodes(nodes);
+	const translationMap = createTranslationMapFromNodes(filteredNodes);
+
+	const translations = await translateText(translationMap);
+	nodes.forEach((node, i) => {
+		node.textContent = translations[node.textContent]
+	});
+}
+
+translateNodes(getAllTextNodes());
+
+const observer = new MutationObserver(([mutation]) => {
+	translateNodes([...mutation.addedNodes].reduce((result, current) => [...result, ...getAllTextNodes(current)], []));
+});
+
+observer.observe(document.body, { subtree: true, childList: true });
