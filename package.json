@@ -1,0 +1,14 @@
+{
+	"name": "translate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "web-ext run -t chromium --source-dir ./src --start-url nos.nl"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"web-ext": "^6.6.0"
+	}
+}

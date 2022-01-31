@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+		<form class="form">
+			<fieldset class="row">
+				<label>Automatically translate Dutch sites</label>
+				<input id="isAutomaticTranslationEnabled" type="checkbox" />
+			</fieldset>
+			<fieldset class="row">
+				<label>Disable for <span id="domain"></span></label>
+				<input id="disableForDomain" type="checkbox" />
+			</fieldset>
+			<button>Translate current page</button>
+		</form>
+    <script src="/shared.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
