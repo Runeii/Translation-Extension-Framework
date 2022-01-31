@@ -11,14 +11,25 @@ const isPageTranslatable = async (url) => {
 		return false;
 	}
 
-	if (url.includes('chrome://')) {
+	const getLang = () => new Promise((resolve) => {
+		browser.tabs.executeScript({
+			code: `document.documentElement.lang`
+		}, resolve);
+	})
+
+	const lang = await getLang();
+	if (!lang?.[0] || lang[0] !== 'nl') {
+		return;
+	}
+	const urlObj = new URL(url);
+
+	if (!urlObj.protocol.includes('http')) {
 		return false;
 	}
 
-	const currentHostname = new URL(url).hostname;
 	const exceptions = await getSetting('exceptions', []);
 
-	if (exceptions.includes(currentHostname)) {
+	if (exceptions.includes(urlObj.hostname)) {
 		return false;
 	}
 
