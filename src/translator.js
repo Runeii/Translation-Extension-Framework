@@ -8,33 +8,28 @@ const getAllTextNodes = (root = document.body) => {
 
 const dummied = jsonMap => JSON.stringify(Object.keys(JSON.parse(jsonMap)).reduce((output, current) => ({ ...output, [current]: 'transalted' }), {}))
 
-const translate = async jsonMap => {
-	return dummied(jsonMap)
-	const res = await fetch("https://libretranslate.com/translate", {
+const translate = async strings => {
+	if (strings.length === 0) {
+		return;
+	}
+	//https://proxy.workerify.workers.dev	
+	const res = await fetch("http://127.0.0.1:8787/", {
 		method: "POST",
-		body: JSON.stringify({
-			q: node.textContent,
-			source: "nl",
-			target: "en"
-		}),
+		body: JSON.stringify(strings),
 		headers: { "Content-Type": "application/json" }
 	});
 
-	const { error, translatedText } = await res.json();
-
-	if (error) {
-		throw new Error(error);
-	}
-
-	return translatedText;
+	return await res.json();
 }
 
-const translateText = async map => {
-	const jsonMap = JSON.stringify(map);
-	const translationString = await translate(jsonMap);
-
-	const translations = JSON.parse(translationString);
-	cachedTranslations = { ...cachedTranslations, ...translations };
+const translateText = async chunks => {
+	const translations = await Promise.all(chunks.map(async chunk => translate(chunk)))
+	const all = translations.flat();
+	console.log(all)
+	cachedTranslations = {
+		...cachedTranslations,
+		...(all.reduce((result, current) => ({ ...result, ...current }), {}))
+	}
 	return cachedTranslations;
 }
 
@@ -52,18 +47,35 @@ const createTranslationMapFromNodes = nodes => nodes.reduce((result, node) => {
 		return result;
 	}
 
-	return {
+	return [
 		...result,
-		[node.textContent]: ''
-	};
-}, {})
+		node.textContent
+	];
+}, []);
+
+const split = array => array.reduce((resultArray, item, index) => {
+	const chunkIndex = Math.floor(index / 50)
+
+	if (!resultArray[chunkIndex]) {
+		resultArray[chunkIndex] = []
+	}
+
+	resultArray[chunkIndex].push(item)
+
+	return resultArray
+}, []);
 
 const translateNodes = async nodes => {
 	const filteredNodes = filterNodes(nodes);
-	const translationMap = createTranslationMapFromNodes(filteredNodes);
+	if (filterNodes.length === 0) {
+		return;
+	}
 
-	const translations = await translateText(translationMap);
-	nodes.forEach((node, i) => {
+	const translationMap = createTranslationMapFromNodes(filteredNodes);
+	const translatableChunks = split(translationMap)
+	const translations = await translateText(translatableChunks);
+
+	filteredNodes.forEach((node, i) => {
 		node.textContent = translations[node.textContent]
 	});
 }
