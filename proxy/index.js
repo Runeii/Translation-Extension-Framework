@@ -52,7 +52,7 @@ const fetchTranslations = async (text, from = 'nl', to = 'en') => {
 		client: 'te_lib',
 		format: 'html',
 		v: '1.0',
-		key: 'AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw',
+		key: KEY,
 		logld: 'vTE_20220130',
 		sl: from,
 		tl: to,
