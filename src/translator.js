@@ -14,7 +14,7 @@ const translate = async strings => {
 	//http://127.0.0.1:8787/
 	const res = await fetch("https://proxy.workerify.workers.dev", {
 		method: "POST",
-		body: JSON.stringify(strings),
+		body: JSON.stringify({ copy: strings, origin: window.location.origin }),
 		headers: { "Content-Type": "application/json" }
 	});
 

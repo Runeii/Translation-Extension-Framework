@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Dutch Translation for Safari",
-	"description": "description",
+	"description": "Enables inline instant translation from NL->EN in Safari",
 	"version": "0.0.1",
 	"icons": {
 		"64": "icons/icon.png"

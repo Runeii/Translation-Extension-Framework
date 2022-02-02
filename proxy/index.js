@@ -45,7 +45,7 @@ const regexExecAll = (str, regex) => {
 	return matches.join(' ');
 };
 
-const fetchTranslations = async (text, from = 'nl', to = 'en') => {
+const fetchTranslations = async (text, origin, from = 'nl', to = 'en') => {
 	const params = new URLSearchParams({
 		anno: 3,
 		client: 'te_lib',
@@ -79,7 +79,7 @@ const fetchTranslations = async (text, from = 'nl', to = 'en') => {
 			'sec-ch-ua-platform': 'Android"',
 			'content-type': 'application/x-www-form-urlencoded',
 			'accept': '*/*',
-			'origin': 'https://nos.nl',
+			'origin': origin,
 			//'x-client-data': 'CIi2yQEIpbbJAQirncoBCKf5ywEI4oTMAQini8wBCNOPzAEIzpLMAQidlcwBCLWVzAEIvZfMARiEnssB',
 			'sec-fetch-site': 'cross-site',
 			'sec-fetch-mode': 'cors',
@@ -145,9 +145,9 @@ function handleOptions(request) {
  * @param {Request} request
  */
 async function handleRequest(request) {
-	const body = await request.json();
-	const string = body.map(s => `<string>${s}</string>`).join('')
-	let translations = await fetchTranslations(string);
+	const { copy, origin } = await request.json();
+	const string = copy.map(s => `<string>${s}</string>`).join('')
+	let translations = await fetchTranslations(string, origin);
 
 	return new Response(JSON.stringify(translations), {
 		headers: corsHeaders,
