@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Google Translate for Safari",
+	"name": "Dutch Translation for Safari",
 	"description": "description",
 	"version": "0.0.1",
 	"icons": {
@@ -10,9 +10,9 @@
 		"scripts": [
 			"shared.js",
 			"background.js"
-		]
+		],
+		"persistent": false
 	},
-	"content_scripts": [],
 	"permissions": [
 		"activeTab",
 		"tabs",
@@ -24,6 +24,6 @@
 			"64": "icons/icon.png"
 		},
 		"default_popup": "browserAction/index.html",
-		"default_title": "Google Translate for Safari"
+		"default_title": "Dutch Translation for Safari"
 	}
 }

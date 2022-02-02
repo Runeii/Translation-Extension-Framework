@@ -6,8 +6,6 @@ const getAllTextNodes = (root = document.body) => {
 	return a;
 }
 
-const dummied = jsonMap => JSON.stringify(Object.keys(JSON.parse(jsonMap)).reduce((output, current) => ({ ...output, [current]: 'transalted' }), {}))
-
 const translate = async strings => {
 	if (strings.length === 0) {
 		return;
@@ -22,17 +20,6 @@ const translate = async strings => {
 	return await res.json();
 }
 
-const translateText = async chunks => {
-	const translations = await Promise.all(chunks.map(async chunk => translate(chunk)))
-	const all = translations.flat();
-	console.log(all)
-	cachedTranslations = {
-		...cachedTranslations,
-		...(all.reduce((result, current) => ({ ...result, ...current }), {}))
-	}
-	return cachedTranslations;
-}
-
 const filterNodes = nodes => {
 	const alphaRegex = new RegExp(/[a-zA-Z]+/);
 	return [...nodes].filter(({ data, parentNode }) =>
@@ -42,28 +29,7 @@ const filterNodes = nodes => {
 	).sort((a, b) => b.length - a.length)
 }
 
-const createTranslationMapFromNodes = nodes => nodes.reduce((result, node) => {
-	if (cachedTranslations[node.textContent]) {
-		return result;
-	}
-
-	return [
-		...result,
-		node.textContent
-	];
-}, []);
-
-const split = array => array.reduce((resultArray, item, index) => {
-	const chunkIndex = Math.floor(index / 50)
-
-	if (!resultArray[chunkIndex]) {
-		resultArray[chunkIndex] = []
-	}
-
-	resultArray[chunkIndex].push(item)
-
-	return resultArray
-}, []);
+const createTranslationMapFromNodes = nodes => nodes.map((node) => node.textContent);
 
 const translateNodes = async nodes => {
 	const filteredNodes = filterNodes(nodes);
@@ -72,11 +38,12 @@ const translateNodes = async nodes => {
 	}
 
 	const translationMap = createTranslationMapFromNodes(filteredNodes);
-	const translatableChunks = split(translationMap)
-	const translations = await translateText(translatableChunks);
-
+	const translations = await translate(translationMap)
+	const div = document.createElement('div');
 	filteredNodes.forEach((node, i) => {
-		node.textContent = translations[node.textContent]
+		div.innerHTML = translations[i]
+		console.log(node.textContent, translations[i], div.textContent)
+		node.textContent = div.textContent
 	});
 }
 

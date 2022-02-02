@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49C8B31727A9AA4D00658558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C8B31627A9AA4D00658558 /* AppDelegate.swift */; };
+		49C8B31B27A9AA4D00658558 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B31927A9AA4D00658558 /* Main.html */; };
+		49C8B31D27A9AA4D00658558 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B31C27A9AA4D00658558 /* Icon.png */; };
+		49C8B31F27A9AA4D00658558 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B31E27A9AA4D00658558 /* Style.css */; };
+		49C8B32127A9AA4D00658558 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C8B32027A9AA4D00658558 /* SceneDelegate.swift */; };
+		49C8B32327A9AA4D00658558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C8B32227A9AA4D00658558 /* ViewController.swift */; };
+		49C8B32627A9AA4D00658558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B32427A9AA4D00658558 /* LaunchScreen.storyboard */; };
+		49C8B32927A9AA4D00658558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B32727A9AA4D00658558 /* Main.storyboard */; };
+		49C8B33127A9AA4E00658558 /* Dutch Translation for Safari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49C8B33027A9AA4E00658558 /* Dutch Translation for Safari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		49C8B33627A9AA4E00658558 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C8B33527A9AA4E00658558 /* SafariWebExtensionHandler.swift */; };
+		49C8B33827A9AA4E00658558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B32A27A9AA4D00658558 /* Assets.xcassets */; };
+		49C8B34A27A9AA4E00658558 /* pageAction in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34327A9AA4E00658558 /* pageAction */; };
+		49C8B34B27A9AA4E00658558 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34427A9AA4E00658558 /* background.js */; };
+		49C8B34C27A9AA4E00658558 /* browserAction in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34527A9AA4E00658558 /* browserAction */; };
+		49C8B34D27A9AA4E00658558 /* translator.js in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34627A9AA4E00658558 /* translator.js */; };
+		49C8B34E27A9AA4E00658558 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34727A9AA4E00658558 /* icons */; };
+		49C8B34F27A9AA4E00658558 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34827A9AA4E00658558 /* manifest.json */; };
+		49C8B35027A9AA4E00658558 /* shared.js in Resources */ = {isa = PBXBuildFile; fileRef = 49C8B34927A9AA4E00658558 /* shared.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49C8B33227A9AA4E00658558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49C8B30B27A9AA4D00658558 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49C8B32F27A9AA4E00658558;
+			remoteInfo = "Dutch Translation for Safari Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49C8B33E27A9AA4E00658558 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				49C8B33127A9AA4E00658558 /* Dutch Translation for Safari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		49C8B31327A9AA4D00658558 /* Dutch Translation for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dutch Translation for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C8B31627A9AA4D00658558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49C8B31A27A9AA4D00658558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		49C8B31C27A9AA4D00658558 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		49C8B31E27A9AA4D00658558 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		49C8B32027A9AA4D00658558 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49C8B32227A9AA4D00658558 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49C8B32527A9AA4D00658558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49C8B32827A9AA4D00658558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49C8B32A27A9AA4D00658558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49C8B32B27A9AA4D00658558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C8B33027A9AA4E00658558 /* Dutch Translation for Safari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dutch Translation for Safari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49C8B33527A9AA4E00658558 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		49C8B33727A9AA4E00658558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C8B34327A9AA4E00658558 /* pageAction */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pageAction; path = ../../src/pageAction; sourceTree = "<group>"; };
+		49C8B34427A9AA4E00658558 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../src/background.js; sourceTree = "<group>"; };
+		49C8B34527A9AA4E00658558 /* browserAction */ = {isa = PBXFileReference; lastKnownFileType = folder; name = browserAction; path = ../../src/browserAction; sourceTree = "<group>"; };
+		49C8B34627A9AA4E00658558 /* translator.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = translator.js; path = ../../src/translator.js; sourceTree = "<group>"; };
+		49C8B34727A9AA4E00658558 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../src/icons; sourceTree = "<group>"; };
+		49C8B34827A9AA4E00658558 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../src/manifest.json; sourceTree = "<group>"; };
+		49C8B34927A9AA4E00658558 /* shared.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = shared.js; path = ../../src/shared.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49C8B31027A9AA4D00658558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C8B32D27A9AA4E00658558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49C8B30A27A9AA4D00658558 = {
+			isa = PBXGroup;
+			children = (
+				49C8B31527A9AA4D00658558 /* Dutch Translation for Safari */,
+				49C8B33427A9AA4E00658558 /* Dutch Translation for Safari Extension */,
+				49C8B31427A9AA4D00658558 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49C8B31427A9AA4D00658558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49C8B31327A9AA4D00658558 /* Dutch Translation for Safari.app */,
+				49C8B33027A9AA4E00658558 /* Dutch Translation for Safari Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49C8B31527A9AA4D00658558 /* Dutch Translation for Safari */ = {
+			isa = PBXGroup;
+			children = (
+				49C8B31627A9AA4D00658558 /* AppDelegate.swift */,
+				49C8B32027A9AA4D00658558 /* SceneDelegate.swift */,
+				49C8B32227A9AA4D00658558 /* ViewController.swift */,
+				49C8B32427A9AA4D00658558 /* LaunchScreen.storyboard */,
+				49C8B32727A9AA4D00658558 /* Main.storyboard */,
+				49C8B32A27A9AA4D00658558 /* Assets.xcassets */,
+				49C8B32B27A9AA4D00658558 /* Info.plist */,
+				49C8B31827A9AA4D00658558 /* Resources */,
+			);
+			path = "Dutch Translation for Safari";
+			sourceTree = "<group>";
+		};
+		49C8B31827A9AA4D00658558 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49C8B31927A9AA4D00658558 /* Main.html */,
+				49C8B31C27A9AA4D00658558 /* Icon.png */,
+				49C8B31E27A9AA4D00658558 /* Style.css */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49C8B33427A9AA4E00658558 /* Dutch Translation for Safari Extension */ = {
+			isa = PBXGroup;
+			children = (
+				49C8B34227A9AA4E00658558 /* Resources */,
+				49C8B33527A9AA4E00658558 /* SafariWebExtensionHandler.swift */,
+				49C8B33727A9AA4E00658558 /* Info.plist */,
+			);
+			path = "Dutch Translation for Safari Extension";
+			sourceTree = "<group>";
+		};
+		49C8B34227A9AA4E00658558 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49C8B34327A9AA4E00658558 /* pageAction */,
+				49C8B34427A9AA4E00658558 /* background.js */,
+				49C8B34527A9AA4E00658558 /* browserAction */,
+				49C8B34627A9AA4E00658558 /* translator.js */,
+				49C8B34727A9AA4E00658558 /* icons */,
+				49C8B34827A9AA4E00658558 /* manifest.json */,
+				49C8B34927A9AA4E00658558 /* shared.js */,
+			);
+			name = Resources;
+			path = "Dutch Translation for Safari Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49C8B31227A9AA4D00658558 /* Dutch Translation for Safari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C8B33F27A9AA4E00658558 /* Build configuration list for PBXNativeTarget "Dutch Translation for Safari" */;
+			buildPhases = (
+				49C8B30F27A9AA4D00658558 /* Sources */,
+				49C8B31027A9AA4D00658558 /* Frameworks */,
+				49C8B31127A9AA4D00658558 /* Resources */,
+				49C8B33E27A9AA4E00658558 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49C8B33327A9AA4E00658558 /* PBXTargetDependency */,
+			);
+			name = "Dutch Translation for Safari";
+			productName = "Dutch Translation for Safari";
+			productReference = 49C8B31327A9AA4D00658558 /* Dutch Translation for Safari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49C8B32F27A9AA4E00658558 /* Dutch Translation for Safari Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C8B33B27A9AA4E00658558 /* Build configuration list for PBXNativeTarget "Dutch Translation for Safari Extension" */;
+			buildPhases = (
+				49C8B32C27A9AA4E00658558 /* Sources */,
+				49C8B32D27A9AA4E00658558 /* Frameworks */,
+				49C8B32E27A9AA4E00658558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dutch Translation for Safari Extension";
+			productName = "Dutch Translation for Safari Extension";
+			productReference = 49C8B33027A9AA4E00658558 /* Dutch Translation for Safari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49C8B30B27A9AA4D00658558 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					49C8B31227A9AA4D00658558 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					49C8B32F27A9AA4E00658558 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 49C8B30E27A9AA4D00658558 /* Build configuration list for PBXProject "Dutch Translation for Safari" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49C8B30A27A9AA4D00658558;
+			productRefGroup = 49C8B31427A9AA4D00658558 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49C8B31227A9AA4D00658558 /* Dutch Translation for Safari */,
+				49C8B32F27A9AA4E00658558 /* Dutch Translation for Safari Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49C8B31127A9AA4D00658558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C8B31D27A9AA4D00658558 /* Icon.png in Resources */,
+				49C8B32927A9AA4D00658558 /* Main.storyboard in Resources */,
+				49C8B32627A9AA4D00658558 /* LaunchScreen.storyboard in Resources */,
+				49C8B31B27A9AA4D00658558 /* Main.html in Resources */,
+				49C8B33827A9AA4E00658558 /* Assets.xcassets in Resources */,
+				49C8B31F27A9AA4D00658558 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C8B32E27A9AA4E00658558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C8B34C27A9AA4E00658558 /* browserAction in Resources */,
+				49C8B34B27A9AA4E00658558 /* background.js in Resources */,
+				49C8B35027A9AA4E00658558 /* shared.js in Resources */,
+				49C8B34D27A9AA4E00658558 /* translator.js in Resources */,
+				49C8B34E27A9AA4E00658558 /* icons in Resources */,
+				49C8B34F27A9AA4E00658558 /* manifest.json in Resources */,
+				49C8B34A27A9AA4E00658558 /* pageAction in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49C8B30F27A9AA4D00658558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C8B32327A9AA4D00658558 /* ViewController.swift in Sources */,
+				49C8B31727A9AA4D00658558 /* AppDelegate.swift in Sources */,
+				49C8B32127A9AA4D00658558 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C8B32C27A9AA4E00658558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C8B33627A9AA4E00658558 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49C8B33327A9AA4E00658558 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49C8B32F27A9AA4E00658558 /* Dutch Translation for Safari Extension */;
+			targetProxy = 49C8B33227A9AA4E00658558 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49C8B31927A9AA4D00658558 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C8B31A27A9AA4D00658558 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		49C8B32427A9AA4D00658558 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C8B32527A9AA4D00658558 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49C8B32727A9AA4D00658558 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49C8B32827A9AA4D00658558 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49C8B33927A9AA4E00658558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49C8B33A27A9AA4E00658558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49C8B33C27A9AA4E00658558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU56H8W746;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dutch Translation for Safari Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dutch Translation for Safari Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "development.amsterdam.Dutch-Translation-for-Safari.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49C8B33D27A9AA4E00658558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU56H8W746;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dutch Translation for Safari Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dutch Translation for Safari Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "development.amsterdam.Dutch-Translation-for-Safari.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49C8B34027A9AA4E00658558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU56H8W746;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dutch Translation for Safari/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dutch Translation for Safari";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "development.amsterdam.Dutch-Translation-for-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49C8B34127A9AA4E00658558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JU56H8W746;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dutch Translation for Safari/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Dutch Translation for Safari";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "development.amsterdam.Dutch-Translation-for-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49C8B30E27A9AA4D00658558 /* Build configuration list for PBXProject "Dutch Translation for Safari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C8B33927A9AA4E00658558 /* Debug */,
+				49C8B33A27A9AA4E00658558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C8B33B27A9AA4E00658558 /* Build configuration list for PBXNativeTarget "Dutch Translation for Safari Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C8B33C27A9AA4E00658558 /* Debug */,
+				49C8B33D27A9AA4E00658558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C8B33F27A9AA4E00658558 /* Build configuration list for PBXNativeTarget "Dutch Translation for Safari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C8B34027A9AA4E00658558 /* Debug */,
+				49C8B34127A9AA4E00658558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49C8B30B27A9AA4D00658558 /* Project object */;
+}

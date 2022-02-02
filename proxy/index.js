@@ -42,8 +42,7 @@ const regexExecAll = (str, regex) => {
 
 		if (!regex.global) break;
 	}
-
-	return matches;
+	return matches.join(' ');
 };
 
 const fetchTranslations = async (text, from = 'nl', to = 'en') => {
@@ -91,8 +90,12 @@ const fetchTranslations = async (text, from = 'nl', to = 'en') => {
 		method: 'POST'
 	});
 
-	const asJson = await res.json();
-	const values = regexExecAll(asJson, (/<b>([^<]*)<\/b>/g));
+	let asJson = await res.json();
+	if (typeof asJson !== 'string') {
+		asJson = asJson[0]
+	}
+	const [_, ...results] = asJson.split('<string>');
+	const values = results.map(s => regexExecAll(s, /<b>([^<]*)<\/b>/g));
 	return values;
 	const keys = regexExecAll(asJson, (/<i>([^<]*)<\/i>/g));
 
@@ -143,7 +146,7 @@ function handleOptions(request) {
  */
 async function handleRequest(request) {
 	const body = await request.json();
-	const string = body.map(s => `<p>${s}</p>`).join('')
+	const string = body.map(s => `<string>${s}</string>`).join('')
 	let translations = await fetchTranslations(string);
 
 	return new Response(JSON.stringify(translations), {
