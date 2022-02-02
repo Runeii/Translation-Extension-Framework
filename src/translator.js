@@ -43,7 +43,6 @@ const translateNodes = async nodes => {
 	const div = document.createElement('div');
 	filteredNodes.forEach((node, i) => {
 		div.innerHTML = translations[i]
-		console.log(node.textContent, translations[i], div.textContent)
 		node.textContent = div.textContent
 	});
 }

@@ -20,8 +20,6 @@ const setupPage = async () => {
 }
 
 const updateSettings = async ({ currentTarget: { checked, id } }) => {
-	console.log('Checked box', checked);
-
 	if (id === 'isAutomaticTranslationEnabled') {
 		await setSetting('isAutomaticTranslationEnabled', checked);
 	}
