@@ -14,11 +14,12 @@ const isPageTranslatable = async (url) => {
 	const getLang = () => new Promise((resolve) => {
 		browser.tabs.executeScript({
 			code: `document.documentElement.lang`
-		}, resolve);
+		}, results => resolve(results?.[0] ?? null));
 	})
 
 	const lang = await getLang();
-	if (!lang?.[0] || lang[0] !== 'nl') {
+	const primary = lang?.split('-') ?? null;
+	if (!primary || primary[0] !== 'nl') {
 		return;
 	}
 	const urlObj = new URL(url);
