@@ -1,4 +1,5 @@
 let cachedTranslations = {}
+let targetLang = null;
 
 const getAllTextNodes = (root = document.body) => {
     var n, a = [], walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
@@ -12,12 +13,12 @@ const translate = async strings => {
     }
     //https://proxy.workerify.workers.dev	
     //http://127.0.0.1:8787/
-    const res = await fetch("http://127.0.0.1:8787", {
+    const res = await fetch("https://proxy.workerify.workers.dev", {
         method: "POST",
         body: JSON.stringify({
             copy: strings,
             origin: window.location.origin,
-            to: translationForSafariTargetLang
+            to: targetLang
         }),
         headers: { "Content-Type": "application/json" }
     });
@@ -51,10 +52,13 @@ const translateNodes = async nodes => {
     });
 }
 
-translateNodes(getAllTextNodes());
+const translatePage = lang => {
+    targetLang = lang;
+    translateNodes(getAllTextNodes());
 
-const observer = new MutationObserver(([mutation]) => {
-    translateNodes([...mutation.addedNodes].reduce((result, current) => [...result, ...getAllTextNodes(current)], []));
-});
+    const observer = new MutationObserver(([mutation]) => {
+        translateNodes([...mutation.addedNodes].reduce((result, current) => [...result, ...getAllTextNodes(current)], []));
+    });
 
-observer.observe(document.body, { subtree: true, childList: true });
+    observer.observe(document.body, { subtree: true, childList: true });
+}

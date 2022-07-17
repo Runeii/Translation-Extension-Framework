@@ -1,9 +1,13 @@
+let hasEmbeddedTranslator = false;
 const translatePage = async (tabId) => {
+    if (!hasEmbeddedTranslator) {
+        browser.tabs.executeScript(tabId, {
+            file: '/translator.js'
+        });
+        hasEmbeddedTranslator = true;
+    }
     browser.tabs.executeScript(tabId, {
-        code: `const translationForSafariTargetLang = '${await getSetting('targetLanguage', 'back')}';`
-    });
-    browser.tabs.executeScript(tabId, {
-        file: '/translator.js'
+        code: `translatePage('${await getSetting('targetLanguage', 'back')}');`
     });
 }
 
@@ -42,6 +46,7 @@ const isPageTranslatable = async (url) => {
 
 browser.tabs.onUpdated.addListener(async (id, _, { status, url }) => {
     if (status !== 'complete') {
+        hasEmbeddedTranslator = false;
         return;
     }
     if (await isPageTranslatable(url)) {

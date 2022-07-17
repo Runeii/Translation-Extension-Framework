@@ -1,21 +1,30 @@
 .form {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system;
+}
+
+button, label, select, option {
+    font: inherit;
 }
 
 .row {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	white-space: nowrap;
-	border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    border: none;
 }
 
 label {
-	margin-right: 20px;
+    margin-right: 20px;
+}
+
+button {
+    margin: 2em 0.75em 0;
 }
 
 #domain {
-	font-style: italic;
+    font-style: italic;
 }
